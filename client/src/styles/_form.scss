@@ -1,0 +1,70 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 55%;
+  padding: 2rem 3rem;
+  border: 0.0625rem solid #d1d9e6;
+  border-radius: 0.55rem;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+  font-size: 1rem;
+
+  @include media-max($md) {
+    width: 70%;
+  }
+
+  @include media-max($sm) {
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 1rem 2rem;
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    color: $purple;
+
+    &--red {
+      color: $red;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-radius: 0.55rem;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Nunito Sans", sans-serif;
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset -3px -3px 7px 0px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 5px 0px #0003;
+    transition: box-shadow 0.3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset -1px -1px 3px 0px rgba(255, 255, 255, 0.6),
+        inset 1px 1px 3px 0px #0003;
+    }
+  }
+
+  input {
+    font-size: 1.55rem;
+  }
+
+  textarea {
+    min-height: 240px;
+    line-height: 1.55;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

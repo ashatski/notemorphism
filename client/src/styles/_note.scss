@@ -1,0 +1,71 @@
+.note {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: 0 auto 3rem;
+  padding: 1rem 2rem;
+  border: 0.0625rem solid $grey;
+  border-radius: 0.55rem;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+  transition: all 0.2s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+
+  @include media-max($md) {
+    width: 70%;
+  }
+
+  @include media-max($sm) {
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 1rem 5rem 1rem 2rem;
+  }
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.6),
+      0px 0px 0px 0px rgba(255, 255, 255, 0.6), 0px 0px 0px 0px #0001,
+      0px 0px 0px 0px #0001, inset -3px -3px 7px 0px rgba(255, 255, 255, 0.6),
+      inset -3px -3px 7px 0px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 5px 0px #0003, inset 2px 2px 5px 0px #0001;
+
+    .note__delete {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(100%, -50%);
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    padding-bottom: 0.4rem;
+    font-size: 1.55rem;
+  }
+
+  &__delete {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 100%;
+    padding: 0 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(80%, -50%);
+    transition: all 0.25s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+
+    @include media-max($sm) {
+      top: 1rem;
+      right: 2rem;
+      height: auto;
+      padding: 0;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}

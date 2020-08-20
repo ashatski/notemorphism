@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+
+  @include media-max($md) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &__logo {
+    font-size: 1.46rem;
+
+    @include media-max($xs) {
+      font-size: 1rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    height: 100%;
+
+    & > li {
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

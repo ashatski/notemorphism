@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-max($sm) {
+    flex-direction: column;
+  }
+
+  h1 {
+    @include media-max($xs) {
+      font-size: 1.55rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 4.5rem;
+    width: 38%;
+
+    @include media-max($sm) {
+      order: 2;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__right {
+    position: relative;
+    width: 60%;
+    z-index: -1;
+    animation: heroCloudWAnim 3s alternate infinite cubic-bezier(0.47, 0, 0.75, 0.72);
+
+    @include media-max($sm) {
+      order: 1;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes heroCloudWAnim {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+
+  100% {
+    transform: rotate(-2deg) translate(2em, -3em);
+  }
+}

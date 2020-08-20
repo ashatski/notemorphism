@@ -1,0 +1,22 @@
+// Add Nunito Sans Google font
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap");
+
+// MIXINS
+@import "./mixins/media";
+
+// Add browsers consistency
+@import "./reset";
+
+// Global variables
+@import "./vars";
+
+// Styles across entire app
+@import "./global";
+
+// Specific component styles
+@import "./navbar";
+@import "./notes-list";
+@import "./note";
+@import "./form";
+@import "./modal";
+@import "./hero";
